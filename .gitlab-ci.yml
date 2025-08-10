@@ -3,11 +3,13 @@ image: cypress/browsers:22.15.0
 stages:
   - test
 
+variables:
+  REPORT_DIR: "cypress/results/junit/$CI_PIPELINE_ID/$CI_JOB_NAME"
+
 before_script:
   - npm ci
   - npx cypress install
   - npx cypress verify
-  - mkdir -p cypress/results/junit
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -18,21 +20,25 @@ cache:
 api_tests:
   stage: test
   script:
-    - npx cypress run --reporter junit --reporter-options 'mochaFile=cypress/results/junit/results-[hash].xml,toConsole=true' --spec "cypress/e2e/api-tests/**/*.cy.js"
-    - ls -la cypress/results/junit
+    - rm -rf "$REPORT_DIR" || true
+    - mkdir -p "$REPORT_DIR"
+    - npx cypress run --config retries=0 --reporter junit --reporter-options "mochaFile=$REPORT_DIR/results-[hash].xml,toConsole=true" --spec "cypress/e2e/api-tests/**/*.cy.js"
+    - ls -la "$REPORT_DIR"
   artifacts:
     when: always
     reports:
-      junit: cypress/results/junit/*.xml
+      junit: "$REPORT_DIR/*.xml"
     expire_in: 1 week
 
 ui_tests:
   stage: test
   script:
-    - npx cypress run --browser chrome --config-file cypress.config.js --reporter junit --reporter-options 'mochaFile=cypress/results/junit/results-[hash].xml,toConsole=true' --spec "cypress/e2e/ui-tests/**/*.cy.js"
-    - ls -la cypress/results/junit
+    - rm -rf "$REPORT_DIR" || true
+    - mkdir -p "$REPORT_DIR"
+    - npx cypress run --browser chrome --config-file cypress.config.js --config retries=0 --reporter junit --reporter-options "mochaFile=$REPORT_DIR/results-[hash].xml,toConsole=true" --spec "cypress/e2e/ui-tests/**/*.cy.js"
+    - ls -la "$REPORT_DIR"
   artifacts:
     when: always
     reports:
-      junit: cypress/results/junit/*.xml
+      junit: "$REPORT_DIR/*.xml"
     expire_in: 1 week
