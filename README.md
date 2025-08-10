@@ -120,7 +120,19 @@ Observation: UI tests can also be run on command line:
 
 8. On tab "jobs" you can see the logs
 
-Also:
+## If "New pipeline" is not available:
+
+2. Choose last pipeline in the list
+Example: "doc: complete read me file"
+
+3. Click in the link with the number
+Example: #1976593627
+
+4. On tab "tests" you can see the test results
+
+5. On tab "jobs" you can see the logs
+
+## Also:
 New pipeline will be started when there are new commits to develop
 
 #########################################################################
@@ -134,7 +146,7 @@ GitHub
 Cypress
 Node.js
 Npm
-JUnit
+Junit
 
 ################################# Author ################################
 
