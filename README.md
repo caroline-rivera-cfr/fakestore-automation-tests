@@ -35,9 +35,9 @@ Before running the tests, make sure you have:
 #########################################################################
 
 cypress/  
-  e2e/              # UI and API test specifications  
-  support/          # Page Objects and custom commands  
-  results/junit     # XML of JUnit test results  
+    e2e/              # UI and API test specifications  
+    support/          # Page Objects and custom commands  
+    results/junit     # XML of JUnit test results  
 cypress.config.js   # Cypress configuration file  
 .gitlab-ci.yml      # Pipeline CI/CD (GitLab)  
 
@@ -120,7 +120,7 @@ Observation: UI tests can also be run on command line:
 
 8. On tab "jobs" you can see the logs
 
-## If "New pipeline" is not available:
+########## If "New pipeline" is not available:
 
 2. Choose last pipeline in the list  
 Example: "doc: complete read me file"
@@ -132,7 +132,7 @@ Example: #1976593627
 
 5. On tab "jobs" you can see the logs
 
-## Also:  
+########## Also:  
 New pipeline will be started when there are new commits to develop
 
 #########################################################################
