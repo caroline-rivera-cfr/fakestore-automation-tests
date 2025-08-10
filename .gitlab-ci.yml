@@ -1,4 +1,4 @@
-image: cypress/browsers:node18.12.0-chrome119-ff118
+image: cypress/browsers:node20.9.0-chrome120-ff119
 
 stages:
   - test
