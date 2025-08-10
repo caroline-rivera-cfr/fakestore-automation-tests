@@ -55,7 +55,7 @@ https://www.saucedemo.com/
 ############################# RUNNING TESTS #############################
 #########################################################################
 
-############################### API TESTS ###############################
+############################ API TESTS LOCAL ############################
 ################ Run Tests from Command Line (Headless) #################
 
 1. Open the terminal
@@ -72,7 +72,7 @@ Observation: UI tests can also be run on command line:
 4. Results will appear in the terminal
     All 3 tests should pass
 
-################################ UI TESTS ###############################
+############################# UI TESTS LOCAL ############################
 ####################### Run Tests in Cypress GUI ########################
 
 1. Open the terminal
@@ -92,6 +92,13 @@ Observation: UI tests can also be run on command line:
 
 7. Results will be displayed
     All 2 tests should pass
+
+################### API AND UI TESTS LOCAL WITH REPORT ##################
+########################## Run Tests with bat ###########################
+
+1. Double click "run-junit-reports.bat"
+
+2. HTML Reports should be displayed for API and UI tests
 
 ################################## ON CI ################################
 ######################## Run Tests with Gitlab ##########################
