@@ -2,6 +2,11 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'cypress/results/junit/results-[hash].xml',
+    toConsole: true,
+  },
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
