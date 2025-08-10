@@ -1,0 +1,17 @@
+{
+  "name": "fakestore-tests",
+  "version": "1.0.0",
+  "description": "Technical Automation Test (TAT) for FakeStore",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "keywords": [],
+  "author": "Caroline Rivera",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  }
+}
