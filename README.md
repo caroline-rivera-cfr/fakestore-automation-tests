@@ -20,13 +20,15 @@ Before running the tests, make sure you have:
 1. Open the terminal
 
 2. Clone the repository
-   git clone https://github.com/caroline-rivera-cfr/fakestore-automation-tests.git
+    git clone https://github.com/caroline-rivera-cfr/fakestore-automation-tests.git
+    or
+    git clone https://gitlab.com/caroline-rivera-cfr/fakestore-automation-tests.git
 
 3. Navigate to the project folder
-   cd fakestore-automation-tests
+    cd fakestore-automation-tests
 
 4. Install dependencies
-   npm install
+    npm install
 
 #########################################################################
 ########################### PROJECT STRUCTURE ###########################
@@ -35,7 +37,9 @@ Before running the tests, make sure you have:
 cypress/
   e2e/              # UI and API test specifications
   support/          # Page Objects and custom commands
+  results/junit     # XML of JUnit test results
 cypress.config.js   # Cypress configuration file
+.gitlab-ci.yml      # Pipeline CI/CD (GitLab)
 
 #########################################################################
 ############################## TEST TYPES ###############################
@@ -89,6 +93,29 @@ Observation: UI tests can also be run on command line:
 7. Results will be displayed
     All 2 tests should pass
 
+################################## ON CI ################################
+######################## Run Tests with Gitlab ##########################
+
+1. Open 
+    https://gitlab.com/caroline-rivera-cfr/fakestore-automation-tests/-/pipelines/
+
+2. Click button "New pipeline" (blue)
+
+3. Choose develop and no inputs 
+
+4. Click button "New pipeline" (blue)
+
+5. Jobs should be started
+
+6. After a time, jobs should have "passed" flag
+
+7. On tab "tests" you can see the test results
+
+8. On tab "jobs" you can see the logs
+
+Also:
+New pipeline will be started when there are new commits to develop
+
 #########################################################################
 ############################## INFORMATION ##############################
 #########################################################################
@@ -100,6 +127,7 @@ GitHub
 Cypress
 Node.js
 Npm
+JUnit
 
 ################################# Author ################################
 
