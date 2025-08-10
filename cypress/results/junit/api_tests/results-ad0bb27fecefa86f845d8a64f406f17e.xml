@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.612" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-08-10T16:03:46" tests="0" file="cypress\e2e\api-tests\productsApiTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Fake Store - Products API" timestamp="2025-08-10T16:03:46" tests="3" time="1.611" failures="0">
+    <testcase name="Fake Store - Products API Test 1: Validates there are 20 products" time="0.974" classname="Test 1: Validates there are 20 products">
+    </testcase>
+    <testcase name="Fake Store - Products API Test 2: Validates there are 6 products with category electronics and print them" time="0.303" classname="Test 2: Validates there are 6 products with category electronics and print them">
+    </testcase>
+    <testcase name="Fake Store - Products API Test 3: Validates there are 2 electronics with rate &gt; 4" time="0.287" classname="Test 3: Validates there are 2 electronics with rate &gt; 4">
+    </testcase>
+  </testsuite>
+</testsuites>

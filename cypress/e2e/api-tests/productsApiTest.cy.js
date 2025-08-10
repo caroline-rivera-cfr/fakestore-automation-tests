@@ -9,16 +9,14 @@ const EXPECTED_ELECTRONICS_MINRATE4 = 2;
 
 describe('Fake Store - Products API', () => {
  
-  // Test 1: Validates there are 20 products with /products API
-  it('Test 1: Validates there are 20 products', () => {
+  it('TC1 - Validates there are 20 products', () => {
     ProductsApi.getAllProducts().then((products) => {
 
       expect(products.length, 'Products quantity').to.eq(EXPECTED_PRODUCTS);
     });
   });
 
-  // Test 2: Validates there are 6 products with category electronics and print them
-  it('Test 2: Validates there are 6 products with category electronics and print them', () => {
+  it('TC2 - Validates there are 6 products with category electronics and print them', () => {
     ProductsApi.getAllProducts().then((products) => {
 
       const electronics = ProductsApi.filterByCategory(products, 'electronics');
@@ -36,8 +34,7 @@ describe('Fake Store - Products API', () => {
     });
   });
 
-  // Test 3: Validates there are 2 electronics with rate > 4
-  it('Test 3: Validates there are 2 electronics with rate > 4', () => {
+  it('TC3 - Validates there are 2 electronics with rate > 4', () => {
     ProductsApi.getAllProducts().then((products) => {
 
       const electronics = ProductsApi.filterByCategory(products, 'electronics');
