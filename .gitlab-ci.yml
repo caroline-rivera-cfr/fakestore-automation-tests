@@ -5,6 +5,7 @@ stages:
 
 before_script:
   - npm ci
+  - npx cypress install
   - npx cypress verify
 
 cache:
@@ -21,4 +22,4 @@ api_tests:
 ui_tests:
   stage: test
   script:
-    - npx cypress run --browser electron --config-file cypress.config.js --spec "cypress/e2e/ui-tests/**/*.cy.js"
+    - npx cypress run --browser chrome --config-file cypress.config.js --spec "cypress/e2e/ui-tests/**/*.cy.js"
