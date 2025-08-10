@@ -17,39 +17,39 @@ Before running the tests, make sure you have:
 ############################# INSTALLATION ##############################
 #########################################################################
 
-1. Open the terminal
+1. Open the terminal  
 
 2. Clone the repository
-    git clone https://github.com/caroline-rivera-cfr/fakestore-automation-tests.git
-    or
-    git clone https://gitlab.com/caroline-rivera-cfr/fakestore-automation-tests.git
+    git clone https://github.com/caroline-rivera-cfr/fakestore-automation-tests.git  
+    or  
+    git clone https://gitlab.com/caroline-rivera-cfr/fakestore-automation-tests.git  
 
-3. Navigate to the project folder
-    cd fakestore-automation-tests
+3. Navigate to the project folder  
+    cd fakestore-automation-tests  
 
-4. Install dependencies
-    npm install
+4. Install dependencies  
+    npm install  
 
 #########################################################################
 ########################### PROJECT STRUCTURE ###########################
 #########################################################################
 
-cypress/
-  e2e/              # UI and API test specifications
-  support/          # Page Objects and custom commands
-  results/junit     # XML of JUnit test results
-cypress.config.js   # Cypress configuration file
-.gitlab-ci.yml      # Pipeline CI/CD (GitLab)
+cypress/  
+  e2e/              # UI and API test specifications  
+  support/          # Page Objects and custom commands  
+  results/junit     # XML of JUnit test results  
+cypress.config.js   # Cypress configuration file  
+.gitlab-ci.yml      # Pipeline CI/CD (GitLab)  
 
 #########################################################################
 ############################## TEST TYPES ###############################
 #########################################################################
 
-API Tests: Validate the Fake Store REST API endpoints.
-https://fakestoreapi.com/products
+API Tests: Validate the Fake Store REST API endpoints.  
+https://fakestoreapi.com/products  
 
-UI Tests: Validate the Fake Store web application user interface.
-https://www.saucedemo.com/
+UI Tests: Validate the Fake Store web application user interface.  
+https://www.saucedemo.com/  
 
 #########################################################################
 ############################# RUNNING TESTS #############################
@@ -60,16 +60,16 @@ https://www.saucedemo.com/
 
 1. Open the terminal
 
-2. Navigate to the project folder
+2. Navigate to the project folder  
     cd fakestore-automation-tests
 
-3. Run command:
+3. Run command:  
     npx cypress run --spec "cypress/e2e/api-tests/productsApiTest.cy.js"
 
-Observation: UI tests can also be run on command line:
+Observation: UI tests can also be run on command line:  
     npx cypress run --spec "cypress/e2e/ui-tests/productsUiTest.cy.js"
 
-4. Results will appear in the terminal
+4. Results will appear in the terminal  
     All 3 tests should pass
 
 ############################# UI TESTS LOCAL ############################
@@ -77,20 +77,20 @@ Observation: UI tests can also be run on command line:
 
 1. Open the terminal
 
-2. Navigate to the project folder
+2. Navigate to the project folder  
     cd fakestore-automation-tests
 
-3. Run command:
+3. Run command:  
     npx cypress open
 
 4. On Cypress, choose E2E Testing
 
-5. Choose a Browser (example: Chrome)
+5. Choose a Browser (example: Chrome)  
     And click button "Start E2E Test in Chrome"
 
 6. Choose "productsUiTest.cy.js"
 
-7. Results will be displayed
+7. Results will be displayed  
     All 2 tests should pass
 
 ################### API AND UI TESTS LOCAL WITH REPORT ##################
@@ -103,7 +103,7 @@ Observation: UI tests can also be run on command line:
 ################################## ON CI ################################
 ######################## Run Tests with Gitlab ##########################
 
-1. Open 
+1. Open   
     https://gitlab.com/caroline-rivera-cfr/fakestore-automation-tests/-/pipelines/
 
 2. Click button "New pipeline" (blue)
@@ -122,17 +122,17 @@ Observation: UI tests can also be run on command line:
 
 ## If "New pipeline" is not available:
 
-2. Choose last pipeline in the list
+2. Choose last pipeline in the list  
 Example: "doc: complete read me file"
 
-3. Click in the link with the number
+3. Click in the link with the number  
 Example: #1976593627
 
 4. On tab "tests" you can see the test results
 
 5. On tab "jobs" you can see the logs
 
-## Also:
+## Also:  
 New pipeline will be started when there are new commits to develop
 
 #########################################################################
@@ -141,14 +141,14 @@ New pipeline will be started when there are new commits to develop
 
 ########################### Main Technologies ###########################
 
-Git
-GitHub
-Cypress
-Node.js
-Npm
-Junit
+Git  
+GitHub  
+Cypress  
+Node.js  
+Npm  
+Junit  
 
 ################################# Author ################################
 
-Caroline Rivera
+Caroline Rivera  
 [GitHub Profile](https://github.com/caroline-rivera-cfr)
