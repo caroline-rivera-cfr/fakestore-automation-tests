@@ -34,12 +34,14 @@ Before running the tests, make sure you have:
 ########################### PROJECT STRUCTURE ###########################
 #########################################################################
 
-cypress/  
-    e2e/              # UI and API test specifications  
-    support/          # Page Objects and custom commands  
-    results/junit     # XML of JUnit test results  
-cypress.config.js   # Cypress configuration file  
-.gitlab-ci.yml      # Pipeline CI/CD (GitLab)  
+```
+cypress/
+    e2e/            # UI and API test specifications
+    support/        # Page Objects and custom commands
+    results/junit   # XML of JUnit test results
+cypress.config.js   # Cypress configuration file
+.gitlab-ci.yml      # Pipeline CI/CD (GitLab)
+```
 
 #########################################################################
 ############################## TEST TYPES ###############################
@@ -123,10 +125,10 @@ Observation: UI tests can also be run on command line:
 ########## If "New pipeline" is not available:
 
 2. Choose last pipeline in the list  
-Example: "doc: complete read me file"
+Example: "doc: formating readme"
 
 3. Click in the link with the number  
-Example: #1976593627
+Example: #1976714917
 
 4. On tab "tests" you can see the test results
 
