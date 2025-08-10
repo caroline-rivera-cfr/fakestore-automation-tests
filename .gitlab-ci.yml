@@ -1,0 +1,16 @@
+image: cypress/browsers:node18.12.0-chrome119-ff118
+
+stages:
+  - test
+
+e2e:
+  stage: test
+  script:
+    - npm ci
+    - npx cypress run
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*
+      - cypress/screenshots/**/*
+    expire_in: 1 week
