@@ -1,16 +1,35 @@
-image: cypress/browsers:node20.9.0-chrome120-ff119
+# .gitlab-ci.yml
+image: cypress/included:13.6.6
 
 stages:
   - test
 
-e2e:
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+before_script:
+  - npm ci
+
+api_tests:
   stage: test
   script:
-    - npm ci
-    - npx cypress run
+    - npx cypress run --spec "cypress/e2e/api-tests/productsApiTest.cy.js"
   artifacts:
     when: always
     paths:
-      - cypress/videos/**/*
-      - cypress/screenshots/**/*
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 week
+
+ui_tests:
+  stage: test
+  script:
+    - npx cypress run --spec "cypress/e2e/ui-tests/productsUiTest.cy.js"
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
     expire_in: 1 week
