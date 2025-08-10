@@ -18,8 +18,18 @@ api_tests:
   stage: test
   script:
     - npx cypress run --spec "cypress/e2e/api-tests/**/*.cy.js"
+  artifacts:
+    when: always
+    reports:
+      junit: cypress/results/junit/*.xml
+    expire_in: 1 week
 
 ui_tests:
   stage: test
   script:
     - npx cypress run --browser chrome --config-file cypress.config.js --spec "cypress/e2e/ui-tests/**/*.cy.js"
+  artifacts:
+    when: always
+    reports:
+      junit: cypress/results/junit/*.xml
+    expire_in: 1 week
