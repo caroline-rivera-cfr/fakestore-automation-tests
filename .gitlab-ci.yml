@@ -1,18 +1,18 @@
-# .gitlab-ci.yml
-image: cypress/included:14.4.0
+image: cypress/included:14.5.4
 
 stages:
   - test
 
 before_script:
   - npm ci
+  - npx cypress verify
 
 api_tests:
   stage: test
   script:
-    - npx cypress run --browser electron --spec "cypress/e2e/api-tests/**/*.cy.js"
+    - npx cypress run --browser electron --config-file cypress.config.js --spec "cypress/e2e/api-tests/**/*.cy.js"
 
 ui_tests:
   stage: test
   script:
-    - npx cypress run --browser electron --spec "cypress/e2e/ui-tests/**/*.cy.js"
+    - npx cypress run --browser electron --config-file cypress.config.js --spec "cypress/e2e/ui-tests/**/*.cy.js"
