@@ -68,11 +68,11 @@ https://www.saucedemo.com/
 3. Run command:  
     npx cypress run --spec "cypress/e2e/api-tests/productsApiTest.cy.js"
 
-Observation: UI tests can also be run on command line:  
-    npx cypress run --spec "cypress/e2e/ui-tests/productsUiTest.cy.js"
-
 4. Results will appear in the terminal  
     All 3 tests should pass
+
+Observation: UI tests can also be run on command line:  
+    npx cypress run --spec "cypress/e2e/ui-tests/productsUiTest.cy.js"
 
 ############################# UI TESTS LOCAL ############################
 ####################### Run Tests in Cypress GUI ########################
