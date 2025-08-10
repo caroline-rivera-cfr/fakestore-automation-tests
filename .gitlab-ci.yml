@@ -4,27 +4,15 @@ image: cypress/included:14.4.0
 stages:
   - test
 
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - node_modules/
-
 before_script:
   - npm ci
-  - npx cypress verify
 
 api_tests:
   stage: test
-  variables:
-    CYPRESS_video: "false"
-    CYPRESS_screenshotOnRunFailure: "false"
   script:
-    - npx cypress run --browser electron --spec "cypress/e2e/api-tests/productsApiTest.cy.js"
+    - npx cypress run --browser electron --spec "cypress/e2e/api-tests/**/*.cy.js"
 
 ui_tests:
   stage: test
-  variables:
-    CYPRESS_video: "false"
-    CYPRESS_screenshotOnRunFailure: "false"
   script:
-    - npx cypress run --browser electron --spec "cypress/e2e/ui-tests/productsUiTest.cy.js"
+    - npx cypress run --browser electron --spec "cypress/e2e/ui-tests/**/*.cy.js"

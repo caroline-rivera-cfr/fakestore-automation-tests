@@ -6,6 +6,8 @@ module.exports = defineConfig({
     baseUrl: 'https://www.saucedemo.com',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.js',
+    video: process.env.CI ? false : true,
+    screenshotOnRunFailure: process.env.CI ? false : true,
     setupNodeEvents(on, config) {
       on('task', {
         log(message) {
@@ -22,6 +24,5 @@ module.exports = defineConfig({
   retries: {
     runMode: 1,   // 1 retry on mode headless/CI
     openMode: 0,  // no retry on open mode
-  },
-  video: false
+  }
 });
