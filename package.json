@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^14.5.4"
+    "cypress": "^14.5.4",
+    "mocha-junit-reporter": "^2.2.1"
   }
 }
