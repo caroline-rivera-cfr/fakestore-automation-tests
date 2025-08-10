@@ -1,3 +1,5 @@
+image: cypress/browsers:22.15.0
+
 stages:
   - test
 
@@ -12,13 +14,11 @@ cache:
     - .npm/
 
 api_tests:
-  image: cypress/browsers:22.15.0
   stage: test
   script:
     - npx cypress run --spec "cypress/e2e/api-tests/**/*.cy.js"
 
 ui_tests:
-  image: cypress/browsers:22.15.0
   stage: test
   script:
     - npx cypress run --browser electron --config-file cypress.config.js --spec "cypress/e2e/ui-tests/**/*.cy.js"
