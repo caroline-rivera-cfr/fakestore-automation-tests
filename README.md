@@ -143,9 +143,10 @@ New pipeline will be started when there are new commits to develop
 
 ########################### Main Technologies ###########################
 
+Cypress  
 Git  
 GitHub  
-Cypress  
+GitLab  
 Node.js  
 Npm  
 Junit  
